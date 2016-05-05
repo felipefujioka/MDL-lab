@@ -1,0 +1,135 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="support.css">
+    <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
+    <script src="./node_modules/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row main-header">
+      <!-- Title -->
+      <span class="mdl-layout-title">Monitor</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-spinner mdl-js-spinner is-active"></div>
+    </div>
+      <div class="mdl-layout__header-row main-header">
+        <!-- Navigation -->
+        <nav class="mdl-navigation main-filter">
+          <div class="demo-avatar-dropdown">
+            <span>All Producs</span>
+            <button id="prodbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">All Products</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="prodbtn">
+              <li class="mdl-menu__item">01.qa.topster.app</li>
+              <li class="mdl-menu__item">madrid.qa.topster.io.app</li>
+            </ul>
+          </div>
+
+          <div class="demo-avatar-dropdown">
+            <span>All Platforms</span>
+            <button id="platbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">All Platforms</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="platbtn">
+              <li class="mdl-menu__item">Android</li>
+              <li class="mdl-menu__item">iOS</li>
+            </ul>
+          </div>
+
+          <div class="demo-avatar-dropdown">
+            <span>All Objectives</span>
+            <button id="objbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">All Objectives</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="objbtn">
+              <li class="mdl-menu__item">App install</li>
+              <li class="mdl-menu__item">Engagement</li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation main-filter-right">
+          <div class="demo-avatar-dropdown">
+            <span>Creative</span>
+            <button id="typebtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Creative</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="typebtn">
+              <li class="mdl-menu__item">Creative</li>
+            </ul>
+          </div>
+
+          <div class="demo-avatar-dropdown">
+            <span>Today</span>
+            <button id="datebtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="datebtn">
+              <li class="mdl-menu__item">App install</li>
+              <li class="mdl-menu__item">Engagement</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+
+  </header>
+  <div class="mdl-layout__drawer">
+    <header class="demo-drawer-header drawer-header">
+          <p>Felipe</p>
+          <div class="demo-avatar-dropdown">
+            <span>01.qa.topster</span>
+            <div class="mdl-layout-spacer"></div>
+            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Accounts</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+              <li class="mdl-menu__item">01.qa.topster</li>
+              <li class="mdl-menu__item">madrid.qa.topster.io</li>
+            </ul>
+          </div>
+        </header>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link drawer-link" href="">
+        <i class="material-icons drawer-icon">desktop_mac</i>
+        <p class="drawer-text">Monitor</p>
+      </a>
+      <a class="mdl-navigation__link drawer-link" href="">
+        <i class="material-icons drawer-icon">desktop_mac</i>
+        <p class="drawer-text">Advanced Monitor</p>
+      </a>
+      <a class="mdl-navigation__link drawer-link" href="">
+        <i class="material-icons drawer-icon">insert_chart</i>
+        <p class="drawer-text">Report</p>
+      </a>
+      <a class="mdl-navigation__link drawer-link" href="">
+        <i class="material-icons drawer-icon">insert_chart</i>
+        <p class="drawer-text">Advanced Report</p>
+      </a>
+      <a class="mdl-navigation__link" href="">
+        <i class="material-icons drawer-icon">mode_edit</i>
+        <p class="drawer-text">Ads Editor</p>
+      </a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here --></div>
+  </main>
+</div>
+  </body>
+</html>

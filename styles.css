@@ -1,0 +1,32 @@
+.drawer-link {
+  height: 24px;
+  display:table;
+}
+
+.drawer-icon {
+  float: left;
+}
+
+.drawer-text {
+  padding-left: 16px;
+  margin-left: 16px;
+}
+
+.drawer-header {
+  color: white;
+  background: #607D8B;
+}
+
+.main-header {
+  color: white;
+  background: #607D8B;
+}
+
+.main-filter {
+  width: 50%;
+}
+
+.main-filter-right {
+  width: 20%;
+  float: right;
+}
