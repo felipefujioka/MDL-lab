@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
     <script src="./node_modules/material-design-lite/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.js"></script>
+    <link rel="stylesheet" href="date-picker.css">
+    <script src="date-picker.js"></script>
   </head>
   <body>
     <!-- Always shows a header, even in smaller screens. -->
@@ -16,10 +21,14 @@
       <!-- Title -->
       <span class="mdl-layout-title">Monitor</span>
       <div class="mdl-layout-spacer"></div>
-      <div class="mdl-spinner mdl-js-spinner is-active"></div>
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-js-ripple-effect" style="background:#FFFFFF">
+        <div class="mdl-spinner mdl-js-spinner is-active"></div>
+      </button>
+
     </div>
       <div class="mdl-layout__header-row main-header">
         <!-- Navigation -->
+        <!-- Products -->
         <nav class="mdl-navigation main-filter">
           <div class="demo-avatar-dropdown">
             <span>All Producs</span>
@@ -32,7 +41,7 @@
               <li class="mdl-menu__item">madrid.qa.topster.io.app</li>
             </ul>
           </div>
-
+          <!-- Platforms -->
           <div class="demo-avatar-dropdown">
             <span>All Platforms</span>
             <button id="platbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
@@ -44,7 +53,7 @@
               <li class="mdl-menu__item">iOS</li>
             </ul>
           </div>
-
+          <!-- Objectives -->
           <div class="demo-avatar-dropdown">
             <span>All Objectives</span>
             <button id="objbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
@@ -57,7 +66,7 @@
             </ul>
           </div>
         </nav>
-
+        <!-- Creative -->
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation main-filter-right">
           <div class="demo-avatar-dropdown">
@@ -70,16 +79,30 @@
               <li class="mdl-menu__item">Creative</li>
             </ul>
           </div>
-
+          <!-- Interval -->
           <div class="demo-avatar-dropdown">
             <span>Today</span>
             <button id="datebtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
               <i class="material-icons" role="presentation">arrow_drop_down</i>
             </button>
-            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="datebtn">
-              <li class="mdl-menu__item">App install</li>
-              <li class="mdl-menu__item">Engagement</li>
-            </ul>
+            <div class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect main-date-picker" for="datebtn">
+              <input type="text" data-type="date" id="date-input" />
+              <div id="material-header-holder" style="display:none">
+                <div class="ui-datepicker-material-header">
+                  <div class="ui-datepicker-material-day">
+                  </div>
+                  <div class="ui-datepicker-material-date">
+                    <div class="ui-datepicker-material-month">
+                    </div>
+                    <div class="ui-datepicker-material-day-num">
+                    </div>
+                    <div class="ui-datepicker-material-year">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="datepicker"></div>
+            </div>
           </div>
         </nav>
       </div>
@@ -128,7 +151,86 @@
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>
+    <div class="page-content">
+      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th>
+              <i class="material-icons drawer-icon">query_builder</i>
+            </th>
+            <th class="mdl-data-table__cell--non-numeric">Status</th>
+            <th class="mdl-data-table__cell--non-numeric">Campaign</th>
+            <th class="mdl-data-table__cell--non-numeric">Deliver</th>
+            <th>Purchase</th>
+            <th>Install</th>
+            <th>Launch</th>
+            <th>Clicks</th>
+            <th>Imp</th>
+            <th>Budget</th>
+            <th>Spent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-0">
+                <input type="checkbox" id="switch-0" class="mdl-switch__input">
+                <span class="mdl-switch__label"></span>
+              </label>
+            </td>
+            <td class="mdl-data-table__cell--non-numeric">Android.Eng.Bids</td>
+            <td>Inactive</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                <input type="checkbox" id="switch-1" class="mdl-switch__input">
+                <span class="mdl-switch__label"></span>
+              </label>
+            </td>
+            <td class="mdl-data-table__cell--non-numeric">Android.Install</td>
+            <td>Inactive</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                <input type="checkbox" id="switch-2" class="mdl-switch__input">
+                <span class="mdl-switch__label"></span>
+              </label>
+            </td>
+            <td class="mdl-data-table__cell--non-numeric">iOS.Install</td>
+            <td>Inactive</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+            <td>R$0.00</td>
+          </tr>
+        </tbody>
+      </table
+
+
+    </div>
   </main>
 </div>
   </body>
